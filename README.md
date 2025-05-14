@@ -35,14 +35,32 @@ limitations under the License.
 
 > Perform a series of row interchanges on an input matrix.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/lapack-base-slaswp
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import slaswp from 'https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-slaswp@deno/mod.js';
+var slaswp = require( '@stdlib/lapack-base-slaswp' );
 ```
 
 #### slaswp( N, A, LDA, k1, k2, IPIV, incx )
@@ -50,8 +68,8 @@ import slaswp from 'https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-slaswp@den
 Performs a series of row interchanges on an input matrix `A` using pivot indices stored in `IPIV`.
 
 ```javascript
-import Int32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-int32@deno/mod.js';
-import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@deno/mod.js';
+var Int32Array = require( '@stdlib/array-int32' );
+var Float32Array = require( '@stdlib/array-float32' );
 
 var A = new Float32Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] ); // => [ [ 1.0, 2.0 ], [ 3.0, 4.0 ], [ 5.0, 6.0 ] ]
 var IPIV = new Int32Array( [ 2, 0, 1 ] );
@@ -74,8 +92,8 @@ The function has the following parameters:
 The sign of the increment parameter `incx` determines the order in which pivots are applied. For example, to apply pivots in reverse order,
 
 ```javascript
-import Int32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-int32@deno/mod.js';
-import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@deno/mod.js';
+var Int32Array = require( '@stdlib/array-int32' );
+var Float32Array = require( '@stdlib/array-float32' );
 
 var A = new Float32Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] ); // => [ [ 1.0, 2.0 ], [ 3.0, 4.0 ], [ 5.0, 6.0 ] ]
 var IPIV = new Int32Array( [ 2, 0, 1 ] );
@@ -87,8 +105,8 @@ slaswp( 'row-major', 2, A, 2, 0, 2, IPIV, -1 );
 To perform strided access over `IPIV`, provide an `abs(incx)` value greater than one. For example, to access every other element in `IPIV`,
 
 ```javascript
-import Int32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-int32@deno/mod.js';
-import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@deno/mod.js';
+var Int32Array = require( '@stdlib/array-int32' );
+var Float32Array = require( '@stdlib/array-float32' );
 
 var A = new Float32Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] ); // => [ [ 1.0, 2.0 ], [ 3.0, 4.0 ], [ 5.0, 6.0 ] ]
 var IPIV = new Int32Array( [ 2, 999, 0, 999, 1 ] );
@@ -102,8 +120,8 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable stdlib/capitalized-comments -->
 
 ```javascript
-import Int32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-int32@deno/mod.js';
-import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@deno/mod.js';
+var Int32Array = require( '@stdlib/array-int32' );
+var Float32Array = require( '@stdlib/array-float32' );
 
 // Initial arrays...
 var A0 = new Float32Array( [ 0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
@@ -122,8 +140,8 @@ slaswp( 'row-major', 2, A1, 2, 0, 2, IPIV1, 1 );
 Performs a series of row interchanges on the matrix `A` using pivot indices stored in `IPIV` and alternative indexing semantics.
 
 ```javascript
-import Int32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-int32@deno/mod.js';
-import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@deno/mod.js';
+var Int32Array = require( '@stdlib/array-int32' );
+var Float32Array = require( '@stdlib/array-float32' );
 
 var A = new Float32Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] ); // => [ [ 1.0, 2.0 ], [ 3.0, 4.0 ], [ 5.0, 6.0 ] ]
 var IPIV = new Int32Array( [ 2, 0, 1 ] );
@@ -151,8 +169,8 @@ While [`typed array`][mdn-typed-array] views mandate a view offset based on the 
 <!-- eslint-disable max-len -->
 
 ```javascript
-import Int32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-int32@deno/mod.js';
-import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@deno/mod.js';
+var Int32Array = require( '@stdlib/array-int32' );
+var Float32Array = require( '@stdlib/array-float32' );
 
 var A = new Float32Array( [ 0.0, 0.0, 0.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
 var IPIV = new Int32Array( [ 0, 0, 2, 0, 1 ] );
@@ -171,7 +189,7 @@ slaswp.ndarray( 2, A, 2, 1, 4, 0, 2, 1, IPIV, 1, 2 );
 
 -   Both functions access `k2-k1+1` elements from `IPIV`.
 -   While `slaswp` conflates the order in which pivots are applied with the order in which elements in `IPIV` are accessed, the `ndarray` method delineates control of those behaviors with separate parameters `inck` and `si`.
--   `slaswp()` corresponds to the [LAPACK][LAPACK] level 1 function [`slaswp`][lapack-slaswp].
+-   `slaswp()` corresponds to the [LAPACK][LAPACK] function [`slaswp`][lapack-slaswp].
 
 </section>
 
@@ -184,10 +202,10 @@ slaswp.ndarray( 2, A, 2, 1, 4, 0, 2, 1, IPIV, 1, 2 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@deno/mod.js';
-import Int32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-int32@deno/mod.js';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-to-array@deno/mod.js';
-import slaswp from 'https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-slaswp@deno/mod.js';
+var Float32Array = require( '@stdlib/array-float32' );
+var Int32Array = require( '@stdlib/array-int32' );
+var ndarray2array = require( '@stdlib/ndarray-base-to-array' );
+var slaswp = require( '@stdlib/lapack-base-slaswp' );
 
 // Specify matrix meta data:
 var shape = [ 4, 2 ];
@@ -213,7 +231,73 @@ console.log( ndarray2array( A, shape, strides, offset, order ) );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+TODO
+```
+
+#### TODO
+
+TODO.
+
+```c
+TODO
+```
+
+TODO
+
+```c
+TODO
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+TODO
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -232,7 +316,7 @@ console.log( ndarray2array( A, shape, strides, offset, order ) );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
