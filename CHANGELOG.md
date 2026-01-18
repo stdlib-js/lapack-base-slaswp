@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-05-14)
+## Unreleased (2026-01-18)
 
 <section class="features">
 
@@ -16,12 +16,23 @@
 
 <!-- /.features -->
 
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`5b1c0fd`](https://github.com/stdlib-js/stdlib/commit/5b1c0fd3f21b52b9cf1a791ab74367a08e79b2c8) - add missing exports comments
+
+</section>
+
+<!-- /.bug-fixes -->
+
 <section class="commits">
 
 ### Commits
 
 <details>
 
+-   [`5b1c0fd`](https://github.com/stdlib-js/stdlib/commit/5b1c0fd3f21b52b9cf1a791ab74367a08e79b2c8) - **fix:** add missing exports comments _(by Philipp Burckhardt)_
 -   [`9ab33f7`](https://github.com/stdlib-js/stdlib/commit/9ab33f74cb00123d6b48bc8b2a9f88ec559b82aa) - **docs:** update copy _(by Athan Reines)_
 -   [`6ee5d86`](https://github.com/stdlib-js/stdlib/commit/6ee5d86e28d4bb75b512759bbbfef694fbbf43f5) - **refactor:** use base assertion utility _(by Athan Reines)_
 -   [`e0cef99`](https://github.com/stdlib-js/stdlib/commit/e0cef995e884021db3001dc1a3cfef0ca7b368c2) - **style:** remove extra spaces for regular expressions in publish script _(by Philipp Burckhardt)_
