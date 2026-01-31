@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import slaswp from 'https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-slaswp@deno/mod.js';
+import slaswp from 'https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-slaswp@v0.1.0-deno/mod.js';
 ```
 
 #### slaswp( N, A, LDA, k1, k2, IPIV, incx )
@@ -187,7 +187,7 @@ slaswp.ndarray( 2, A, 2, 1, 4, 0, 2, 1, IPIV, 1, 2 );
 import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@deno/mod.js';
 import Int32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-int32@deno/mod.js';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-to-array@deno/mod.js';
-import slaswp from 'https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-slaswp@deno/mod.js';
+import slaswp from 'https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-slaswp@v0.1.0-deno/mod.js';
 
 // Specify matrix meta data:
 var shape = [ 4, 2 ];
