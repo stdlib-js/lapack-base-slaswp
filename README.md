@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import slaswp from 'https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-slaswp@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/lapack-base-slaswp/tags). For example,
+
+```javascript
 import slaswp from 'https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-slaswp@v0.1.1-esm/index.mjs';
 ```
 
@@ -192,7 +197,7 @@ slaswp.ndarray( 2, A, 2, 1, 4, 0, 2, 1, IPIV, 1, 2 );
 import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
 import Int32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-int32@esm/index.mjs';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-to-array@esm/index.mjs';
-import slaswp from 'https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-slaswp@v0.1.1-esm/index.mjs';
+import slaswp from 'https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-slaswp@esm/index.mjs';
 
 // Specify matrix meta data:
 var shape = [ 4, 2 ];
