@@ -2,6 +2,41 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2026-02-23)
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`fb50958`](https://github.com/stdlib-js/stdlib/commit/fb50958365f133ae79a6caedaa2351be561cfd75) - **bench:** refactor to use string interpolation in `lapack/base/slaswp` [(#10125)](https://github.com/stdlib-js/stdlib/pull/10125) _(by Prajjwal Bajpai, Athan Reines)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 2 people contributed to this release. Thank you to the following contributors:
+
+-   Athan Reines
+-   Prajjwal Bajpai
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.1.1">
 
 ## 0.1.1 (2026-02-08)
